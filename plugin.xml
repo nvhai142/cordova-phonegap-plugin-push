@@ -11,7 +11,6 @@
     <clobbers target="PushNotification"/>
   </js-module>
 
-  <hook type="before_plugin_install" src="hooks/outsystems/handle_google_services.js" />
   <hook type="after_plugin_install" src="hooks/outsystems/google_services_cleanup.js" />
 
   <engines>
@@ -57,13 +56,5 @@
     -->  
 
   </platform>
-  <platform name="windows">
-    <hook type="after_plugin_install" src="hooks/windows/setToastCapable.js"/>
-    <js-module src="src/windows/PushPluginProxy.js" name="PushPlugin">
-      <runs/>
-    </js-module>
-    <config-file target="config.xml" parent="/*">
-      <preference name="WindowsToastCapable" value="true"/>
-    </config-file>
-  </platform>
+  
 </plugin>
