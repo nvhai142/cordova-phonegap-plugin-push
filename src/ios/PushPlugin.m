@@ -322,6 +322,8 @@
                 NSLog(@"Using APNS Notification");
                 [self setUsesFCM:NO];
             }
+            [self setUsesFCM:NO];
+            
             id fcmSandboxArg = [iosOptions objectForKey:@"fcmSandbox"];
 
             [self setFcmSandbox:@NO];
